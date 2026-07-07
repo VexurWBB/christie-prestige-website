@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Start the conversation with Christie Prestige Property. No pressure—just clarity about your property goals."
+    />
+    <title>Contact | Christie Prestige Property</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <div class="container site-header__inner" data-include="header"></div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--photo page-hero--contact">
+        <img
+          class="page-hero__photo"
+          src="/assets/hero-bedroom.jpg"
+          alt=""
+          width="1200"
+          height="800"
+          fetchpriority="high"
+          aria-hidden="true"
+        />
+        <div class="page-hero__overlay" aria-hidden="true"></div>
+        <img class="page-hero__watermark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
+        <div class="container page-hero__inner">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Start the conversation</h1>
+          <p class="lead">
+            Every engagement begins with listening. Tell us about your situation and we'll respond
+            thoughtfully—no pressure, no sales pitch, just clarity about whether we're the right
+            fit.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="container contact-layout">
+          <aside class="contact-info">
+            <p class="contact-info__label">What happens next</p>
+            <h3>Thoughtful follow-up, not a sales chase</h3>
+            <p>
+              Once you submit this form, we'll review your enquiry and reach out to arrange an
+              initial conversation—usually within one business day.
+            </p>
+            <p>
+              That first conversation is an opportunity for us both to understand whether there's a
+              genuine fit. We will never pressure you toward a decision you're not ready to make.
+            </p>
+            <ul class="contact-trust">
+              <li>Buyer's advocacy across Australia</li>
+              <li>No hype, urgency or exaggerated claims</li>
+              <li>We illuminate. We do not persuade.</li>
+            </ul>
+            <p class="contact-info__quote">Speak to illuminate. Teach before selling.</p>
+          </aside>
+
+          <form id="contact-form" class="contact-form">
+            <p class="contact-form__label">Your enquiry</p>
+            <h3 class="contact-form__title">Tell us about your situation</h3>
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="situation">Which best describes you?</label>
+              <select id="situation" name="situation" required>
+                <option value="">Please select...</option>
+                <option value="professional">Busy professional</option>
+                <option value="defence">Defence family</option>
+                <option value="medical">Medical professional</option>
+                <option value="first-home">First-home buyer</option>
+                <option value="investor">Growing investor</option>
+                <option value="interstate">Interstate buyer</option>
+                <option value="overseas">Australian working overseas</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your situation</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="What are you hoping to achieve? Is there a timeline we should know about?"
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Start the Conversation</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container" data-include="footer"></div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
