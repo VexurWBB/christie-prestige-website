@@ -19,7 +19,45 @@ npm run build
 npm run preview
 ```
 
-Output is in the `dist/` folder, ready to upload to any static host (Cloudflare Pages, Netlify, etc.).
+Output is in the `dist/` folder.
+
+## Deploy to Vercel
+
+1. Push this repo to GitHub (see below).
+2. Sign in at [vercel.com](https://vercel.com) with your GitHub account.
+3. Click **Add New → Project** and import the repository.
+4. Vercel detects Vite automatically (`vercel.json` is included). Click **Deploy**.
+5. Your live URL will look like `https://christie-prestige-website.vercel.app`.
+
+Or deploy from the CLI after logging in:
+
+```bash
+npx vercel login
+npx vercel --prod
+```
+
+## GitHub repository
+
+From this folder (after installing [GitHub CLI](https://cli.github.com/) and running `gh auth login`):
+
+```bash
+git branch -M main
+gh repo create christie-prestige-website --public --source=. --remote=origin --push
+```
+
+Or create an empty repo on [github.com/new](https://github.com/new), then:
+
+```bash
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/christie-prestige-website.git
+git push -u origin main
+```
+
+### Adding collaborators
+
+**GitHub:** Repository → **Settings → Collaborators → Add people**
+
+**Vercel:** Project → **Settings → Members** (invite teammates to your Vercel team or project)
 
 ## Pages
 
