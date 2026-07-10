@@ -1,24 +1,5 @@
-import "../css/styles.css";
 import { initLayout } from "./layout.js";
-
-function loadPageStyles() {
-  if (document.body.classList.contains("page-home")) {
-    return import("../css/home.css");
-  }
-  if (document.body.classList.contains("page-about")) {
-    return import("../css/about.css");
-  }
-  if (document.body.classList.contains("page-standard")) {
-    return import("../css/standard.css");
-  }
-  if (document.body.classList.contains("page-who")) {
-    return import("../css/who.css");
-  }
-  if (document.body.classList.contains("page-process")) {
-    return import("../css/process.css");
-  }
-  return Promise.resolve();
-}
+import { initSite } from "./site.js";
 
 function initNav() {
   const navToggle = document.querySelector(".nav-toggle");
@@ -66,10 +47,10 @@ function initContactForm() {
 }
 
 async function init() {
-  await loadPageStyles();
   await initLayout();
   initNav();
   initContactForm();
+  initSite();
 }
 
 init();
