@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Christie Prestige Property — guiding you home, one smart move at a time. Thoughtful buyer's advocacy across Australia."
+      content="Christie Prestige Property — independent buyer's advocacy on the Gold Coast and across Australia. Guiding you home, one smart move at a time, with clarity, confidence and discernment."
     />
     <title>Christie Prestige Property | Buyer's Advocacy</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
@@ -13,343 +13,385 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <style>
+      /* Prevent FOUC: decorative emblems flash full-size before CSS modules load */
+      .page-hero__watermark,
+      .home-hero__watermark,
+      .home-standard__mark,
+      .site-closing__mark,
+      .about-story__watermark {
+        position: absolute;
+        width: min(34vw, 320px);
+        max-width: 320px;
+        height: auto;
+        opacity: 0.06;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
     <script type="module" src="/js/main.js"></script>
+
   </head>
   <body class="page-home" data-page="home">
+    <div class="preloader" data-preloader aria-hidden="true">
+      <div class="preloader__inner">
+        <img class="preloader__emblem" src="/assets/emblem.svg" alt="" />
+        <span class="preloader__word">Christie</span>
+        <span class="preloader__tag">Prestige Property</span>
+        <span class="preloader__bar"><span class="preloader__bar-fill"></span></span>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container site-header__inner" data-include="header"></div>
     </header>
 
-    <main>
-      <section class="home-hero">
-        <img
-          class="home-hero__photo"
-          src="/assets/hero-home.jpg"
-          alt="Premium Australian home at dusk"
-          width="1920"
-          height="1280"
-          fetchpriority="high"
-        />
+    <main class="page-enter">
+      <!-- ————————————————————— Hero ————————————————————— -->
+      <section class="home-hero" data-hero>
+        <div class="home-hero__media" data-hero-bg>
+          <img
+            class="home-hero__photo"
+            src="/assets/hero-home.jpg"
+            alt="Premium Australian home at dusk"
+            width="1920"
+            height="1280"
+            fetchpriority="high"
+          />
+        </div>
         <div class="home-hero__overlay" aria-hidden="true"></div>
+        <div class="home-hero__grain" aria-hidden="true"></div>
         <img class="home-hero__watermark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
+
         <div class="container home-hero__inner">
-          <div class="home-hero__layout">
-            <div class="home-hero__content">
-              <p class="home-hero__eyebrow">Christie Prestige Property</p>
-              <h1>
-                <span class="home-hero__title-line">Guiding you home,</span>
-                <span class="home-hero__title-line"><em>one smart move</em> at a time.</span>
-              </h1>
-              <p class="home-hero__sub">
-                Thoughtful buyer's advocacy across Australia—clarity, confidence and
-                discernment at every step.
-              </p>
-              <div class="home-hero__actions">
-                <a class="btn btn--primary" href="/contact.html">Start the Conversation</a>
-                <a class="btn btn--light home-hero__secondary" href="/our-process.html">Our Process</a>
-              </div>
+          <div class="home-hero__content">
+            <p class="home-hero__eyebrow">
+              <span class="home-hero__eyebrow-dot" aria-hidden="true"></span>
+              Buyer's Advocacy · Gold Coast &amp; Australia-wide
+            </p>
+            <h1 class="home-hero__title">
+              <span class="home-hero__line"><span>Guiding you home,</span></span>
+              <span class="home-hero__line"><span><em>one smart move</em> at a time.</span></span>
+            </h1>
+            <p class="home-hero__sub">
+              Independent buyer's advocacy for people making significant property
+              decisions—clarity, confidence and discernment from the first
+              conversation to well beyond settlement.
+            </p>
+            <div class="home-hero__actions">
+              <a class="btn btn--primary" href="/contact.html">Start the Conversation</a>
+              <a class="btn btn--light home-hero__secondary" href="/christie-standard.html">
+                Explore the Christie Standard
+              </a>
             </div>
           </div>
         </div>
+
         <div class="home-hero__strip">
-          <div class="container home-hero__strip-inner">
-            <ul class="home-hero__trust" aria-label="Highlights">
-              <li><span class="home-hero__trust-text">Buyer's advocacy</span></li>
-              <li><span class="home-hero__trust-text">Australia-wide</span></li>
-              <li><span class="home-hero__trust-text">Two generations, one standard</span></li>
-            </ul>
+          <div class="home-hero__marquee" aria-label="At a glance">
+            <div class="home-hero__marquee-track">
+              <ul class="home-hero__trust">
+                <li><span class="home-hero__trust-text">Independent advocacy</span></li>
+                <li><span class="home-hero__trust-text">Residential · Commercial · SMSF</span></li>
+                <li><span class="home-hero__trust-text">Two generations, one standard</span></li>
+                <li><span class="home-hero__trust-text">Clarity · Discernment · Stewardship · Integrity</span></li>
+                <li><span class="home-hero__trust-text">Speak to illuminate</span></li>
+              </ul>
+              <ul class="home-hero__trust" aria-hidden="true">
+                <li><span class="home-hero__trust-text">Independent advocacy</span></li>
+                <li><span class="home-hero__trust-text">Residential · Commercial · SMSF</span></li>
+                <li><span class="home-hero__trust-text">Two generations, one standard</span></li>
+                <li><span class="home-hero__trust-text">Clarity · Discernment · Stewardship · Integrity</span></li>
+                <li><span class="home-hero__trust-text">Speak to illuminate</span></li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <a class="home-hero__scroll" href="#ethos" aria-label="Scroll to explore">
+          <span class="home-hero__scroll-line" aria-hidden="true"></span>
+          <span class="home-hero__scroll-text">Scroll</span>
+        </a>
       </section>
 
-      <section class="home-message home-section--light">
+      <!-- ————————————————————— Brand ethos ————————————————————— -->
+      <section id="ethos" class="home-ethos home-section--light">
         <div class="container">
-          <div class="home-message__box">
-            <div class="home-message__copy">
-              <p class="home-message__label">Brand vision</p>
-              <h2>
+          <div class="home-ethos__box reveal">
+            <div class="home-ethos__copy">
+              <p class="home-label">Brand vision</p>
+              <h2 class="home-ethos__title">
                 <span>Property decisions shape lives—</span>
                 <span><em>not just portfolios.</em></span>
               </h2>
-              <p class="home-message__text">
-                We help people navigate significant property decisions with clarity, confidence and
-                discernment—translating complexity, earning trust, and guiding better outcomes.
+              <p class="home-ethos__text">
+                Christie Prestige Property exists to help people navigate significant
+                property decisions with clarity, confidence and discernment. We translate
+                complexity rather than amplify it, earn confidence rather than manufacture
+                it, and believe thoughtful guidance creates better decisions than false
+                certainty.
               </p>
-              <ul class="home-message__highlights" aria-label="Core values">
-                <li><span class="home-message__tag-num" aria-hidden="true">01</span>Clarity</li>
-                <li><span class="home-message__tag-num" aria-hidden="true">02</span>Confidence</li>
-                <li><span class="home-message__tag-num" aria-hidden="true">03</span>Discernment</li>
+              <ul class="home-ethos__values stagger" aria-label="Core values">
+                <li>
+                  <span class="home-ethos__value-num" aria-hidden="true">01</span>
+                  <strong>Clarity</strong>
+                  <span>Complexity, translated into confident decisions.</span>
+                </li>
+                <li>
+                  <span class="home-ethos__value-num" aria-hidden="true">02</span>
+                  <strong>Confidence</strong>
+                  <span>Earned through preparation—never manufactured.</span>
+                </li>
+                <li>
+                  <span class="home-ethos__value-num" aria-hidden="true">03</span>
+                  <strong>Discernment</strong>
+                  <span>Judgement that weighs what truly matters.</span>
+                </li>
               </ul>
             </div>
-            <figure class="home-message__visual">
-              <img src="/assets/hero-bedroom.jpg" alt="Warm, welcoming home interior" width="1200" height="800" loading="lazy" />
-              <figcaption class="home-message__caption">Thoughtful buyer's advocacy</figcaption>
+            <figure class="home-ethos__visual">
+              <img
+                src="/assets/hero-interior.jpg"
+                alt="Warm, considered home interior"
+                width="1200"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption class="home-ethos__caption">Helping people make high-quality property decisions</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="home-audience home-section--light">
-        <div class="container">
-          <div class="home-audience__panel">
-            <div class="home-audience__intro">
-              <p class="home-message__label">Who we help</p>
-              <h2>People making <em>important</em> property decisions</h2>
-              <p>From first homes to investment portfolios—we advocate in your interest, not the seller's.</p>
-            </div>
-            <ul class="home-audience__grid alt-cards">
-              <li>
-                <a href="/who-we-help.html">
-                  <span class="home-audience__num" aria-hidden="true">01</span>
-                  <strong>Busy professionals</strong>
-                  <span>Time-poor, outcome-focused</span>
-                </a>
-              </li>
-              <li>
-                <a href="/who-we-help.html">
-                  <span class="home-audience__num" aria-hidden="true">02</span>
-                  <strong>Defence families</strong>
-                  <span>Relocations &amp; transitions</span>
-                </a>
-              </li>
-              <li>
-                <a href="/who-we-help.html">
-                  <span class="home-audience__num" aria-hidden="true">03</span>
-                  <strong>First-home buyers</strong>
-                  <span>Clarity from the start</span>
-                </a>
-              </li>
-              <li>
-                <a href="/who-we-help.html">
-                  <span class="home-audience__num" aria-hidden="true">04</span>
-                  <strong>Investors</strong>
-                  <span>Disciplined due diligence</span>
-                </a>
-              </li>
-            </ul>
-            <a class="home-audience__link" href="/who-we-help.html">Explore who we help <span aria-hidden="true">→</span></a>
+      <!-- ————————————————————— The Christie Standard ————————————————————— -->
+      <section class="home-standard home-section--dark">
+        <img class="home-standard__mark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
+        <div class="container home-standard__inner">
+          <header class="home-standard__head reveal">
+            <p class="home-label home-label--gold">The Christie Standard</p>
+            <h2>A standard, uncovered<br /><em>over decades.</em></h2>
+            <p class="home-standard__lead">
+              Not a slogan, but a philosophy—gradually shaped through leadership,
+              service, and lived experience. It is built upon four enduring principles.
+            </p>
+          </header>
+          <ol class="home-standard__grid stagger">
+            <li class="home-standard__pillar">
+              <span class="home-standard__num">01</span>
+              <h3>Clarity</h3>
+              <p>We make the complex understandable, so every decision is made with open eyes.</p>
+            </li>
+            <li class="home-standard__pillar">
+              <span class="home-standard__num">02</span>
+              <h3>Discernment</h3>
+              <p>Sound judgement amidst noise—separating what matters from what merely glitters.</p>
+            </li>
+            <li class="home-standard__pillar">
+              <span class="home-standard__num">03</span>
+              <h3>Stewardship</h3>
+              <p>We steward decisions, not just transactions—continuing well beyond settlement.</p>
+            </li>
+            <li class="home-standard__pillar">
+              <span class="home-standard__num">04</span>
+              <h3>Integrity</h3>
+              <p>Trust earned through consistent behaviour. We illuminate. We do not persuade.</p>
+            </li>
+          </ol>
+          <div class="home-standard__action reveal">
+            <a class="home-textlink home-textlink--light" href="/christie-standard.html">
+              Discover the Christie Standard <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </section>
 
+      <!-- ————————————————————— Who we help ————————————————————— -->
+      <section class="home-audience home-section--light">
+        <div class="container home-audience__inner">
+          <header class="home-audience__head reveal">
+            <p class="home-label">Who we help</p>
+            <h2>People making <em>important</em> property decisions</h2>
+            <p class="home-audience__lead">
+              From first homes to growing portfolios, we advocate in your
+              interest—never the seller's.
+            </p>
+          </header>
+          <ul class="home-audience__grid stagger">
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">01</span>
+              <h3>Busy professionals</h3>
+              <p>Time-poor and outcome-focused—we carry the search, the analysis and the negotiation.</p>
+            </li>
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">02</span>
+              <h3>Defence families</h3>
+              <p>Postings, relocations and transitions handled with discipline and care.</p>
+            </li>
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">03</span>
+              <h3>Medical &amp; healthcare</h3>
+              <p>Demanding rosters deserve a considered, hands-off buying experience.</p>
+            </li>
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">04</span>
+              <h3>First-home buyers</h3>
+              <p>Clarity and mentorship from the very first step to the front door.</p>
+            </li>
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">05</span>
+              <h3>Growing investors</h3>
+              <p>Disciplined due diligence for residential, commercial and SMSF acquisitions.</p>
+            </li>
+            <li class="home-audience__card">
+              <span class="home-audience__num" aria-hidden="true">06</span>
+              <h3>Interstate &amp; overseas</h3>
+              <p>Buying from afar—expats and interstate Australians securing a home before returning.</p>
+            </li>
+          </ul>
+          <div class="home-audience__cta reveal">
+            <a class="home-textlink" href="/who-we-help.html">
+              Explore who we help <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ————————————————————— Our process ————————————————————— -->
       <section class="home-process home-section--dark">
         <div class="container home-process__inner">
-          <div class="home-process__head">
-            <p class="home-message__label">Our process</p>
-            <h2>Understand. Decide. Steward.</h2>
+          <header class="home-process__head reveal">
+            <p class="home-label home-label--gold">Our process</p>
+            <h2>Understand. Decide. <em>Steward.</em></h2>
             <p class="home-process__lead">
-              A calm, structured path from first conversation to settlement and beyond.
+              A calm, structured path from first conversation to settlement and beyond—
+              six disciplined stages designed to build clarity and confidence.
             </p>
-          </div>
-          <div class="home-process__track">
-            <ol class="home-process__list">
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">01</span>
-                  <strong>Understand</strong>
-                </div>
-                <span class="home-process__hint">Your goals & context</span>
+          </header>
+
+          <div class="home-process__timeline" data-process>
+            <div class="home-process__rail" aria-hidden="true">
+              <span class="home-process__rail-fill" data-process-fill></span>
+            </div>
+            <ol class="home-process__steps stagger">
+              <li class="home-process__step">
+                <span class="home-process__node">01</span>
+                <strong>Understand</strong>
+                <span class="home-process__hint">Your goals &amp; context</span>
               </li>
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">02</span>
-                  <strong>Clarify</strong>
-                </div>
-                <span class="home-process__hint">Criteria & priorities</span>
+              <li class="home-process__step">
+                <span class="home-process__node">02</span>
+                <strong>Clarify</strong>
+                <span class="home-process__hint">Criteria &amp; priorities</span>
               </li>
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">03</span>
-                  <strong>Prepare</strong>
-                </div>
-                <span class="home-process__hint">Strategy & readiness</span>
+              <li class="home-process__step">
+                <span class="home-process__node">03</span>
+                <strong>Prepare</strong>
+                <span class="home-process__hint">Strategy &amp; readiness</span>
               </li>
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">04</span>
-                  <strong>Search</strong>
-                </div>
+              <li class="home-process__step">
+                <span class="home-process__node">04</span>
+                <strong>Search</strong>
                 <span class="home-process__hint">Disciplined shortlisting</span>
               </li>
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">05</span>
-                  <strong>Decide</strong>
-                </div>
+              <li class="home-process__step">
+                <span class="home-process__node">05</span>
+                <strong>Decide</strong>
                 <span class="home-process__hint">Evidence-led choice</span>
               </li>
-              <li>
-                <div class="home-process__step-head">
-                  <span class="home-process__num">06</span>
-                  <strong>Steward</strong>
-                </div>
+              <li class="home-process__step">
+                <span class="home-process__node">06</span>
+                <strong>Steward</strong>
                 <span class="home-process__hint">Beyond settlement</span>
               </li>
             </ol>
-            <div class="home-process__action">
-              <p>Six disciplined stages—each designed to build clarity and confidence.</p>
-              <a class="btn btn--primary" href="/our-process.html">Explore Our Process</a>
-            </div>
+          </div>
+
+          <div class="home-process__action reveal">
+            <a class="btn btn--primary" href="/our-process.html">Explore Our Process</a>
           </div>
         </div>
       </section>
 
+      <!-- ————————————————————— What we believe ————————————————————— -->
       <section class="home-beliefs home-section--light">
         <div class="container home-beliefs__inner">
-          <header class="home-beliefs__head">
-            <p class="eyebrow">What we believe</p>
+          <header class="home-beliefs__head reveal">
+            <p class="home-label">What we believe</p>
             <h2>
               <span>Quiet confidence.</span>
-              <span>Thoughtful guidance.</span>
+              <span><em>Thoughtful guidance.</em></span>
             </h2>
           </header>
-          <div class="home-beliefs__panel">
-            <ul class="home-beliefs__list alt-cards">
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">01</span>
-                <p>Property decisions deserve thoughtful judgement.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">02</span>
-                <p>We illuminate. We do not persuade.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">03</span>
-                <p>Complexity should be translated, not amplified.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">04</span>
-                <p>Clarity creates confidence.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">05</span>
-                <p>Preparation creates better decisions.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">06</span>
-                <p>Property is about people, not just property.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">07</span>
-                <p>Relationships matter more than transactions.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">08</span>
-                <p>Stewardship continues beyond settlement.</p>
-              </li>
-              <li>
-                <span class="home-beliefs__index" aria-hidden="true">09</span>
-                <p>Trust is earned through consistent behaviour.</p>
-              </li>
-            </ul>
-          </div>
+          <ul class="home-beliefs__list stagger">
+            <li><span class="home-beliefs__index" aria-hidden="true">01</span><p>Property decisions deserve thoughtful judgement.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">02</span><p>We illuminate. We do not persuade.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">03</span><p>Complexity should be translated, not amplified.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">04</span><p>Clarity creates confidence.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">05</span><p>Preparation creates better decisions.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">06</span><p>Property is about people, not just property.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">07</span><p>Relationships matter more than transactions.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">08</span><p>Stewardship continues beyond settlement.</p></li>
+            <li><span class="home-beliefs__index" aria-hidden="true">09</span><p>Trust is earned through consistent behaviour.</p></li>
+          </ul>
         </div>
       </section>
 
-      <section class="home-links home-section--dark">
-        <div class="container">
-          <header class="home-links__head">
-            <p class="eyebrow">Explore</p>
-            <h2>Discover the Christie Standard</h2>
-            <p class="home-links__lead">
-              Four paths into who we are, how we think, and how to begin.
-            </p>
-          </header>
-          <div class="home-links__track">
-            <div class="home-links__grid">
-              <a href="/about.html" class="home-links__card">
-                <div class="home-links__card-head">
-                  <span class="home-links__num" aria-hidden="true">01</span>
-                  <span class="home-links__tag">About</span>
-                </div>
-                <strong>Two generations, one standard</strong>
-                <span class="home-links__arrow" aria-hidden="true">→</span>
-              </a>
-              <a href="/christie-standard.html" class="home-links__card">
-                <div class="home-links__card-head">
-                  <span class="home-links__num" aria-hidden="true">02</span>
-                  <span class="home-links__tag">The Christie Standard</span>
-                </div>
-                <strong>Our philosophy</strong>
-                <span class="home-links__arrow" aria-hidden="true">→</span>
-              </a>
-              <a href="/our-process.html" class="home-links__card">
-                <div class="home-links__card-head">
-                  <span class="home-links__num" aria-hidden="true">03</span>
-                  <span class="home-links__tag">Our Process</span>
-                </div>
-                <strong>Understand to steward</strong>
-                <span class="home-links__arrow" aria-hidden="true">→</span>
-              </a>
-              <a href="/contact.html" class="home-links__card home-links__card--accent">
-                <div class="home-links__card-head">
-                  <span class="home-links__num" aria-hidden="true">04</span>
-                  <span class="home-links__tag">Start the Conversation</span>
-                </div>
-                <strong>Tell us about your situation</strong>
-                <span class="home-links__arrow" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-founders home-section--light">
+      <!-- ————————————————————— Founders ————————————————————— -->
+      <section class="home-founders home-section--dark">
         <div class="container home-founders__inner">
-          <header class="home-founders__head">
-            <p class="home-message__label">Our team</p>
-            <h2>
-              <span>Two generations,</span>
-              <span><em>one standard</em></span>
-            </h2>
+          <header class="home-founders__head reveal">
+            <p class="home-label">Our team</p>
+            <h2><span>Two generations,</span> <span><em>one standard</em></span></h2>
             <p class="home-founders__lead">
               Decades of leadership and a new generation of buyers—united by one philosophy.
             </p>
           </header>
-          <div class="home-founders__panel">
-            <div class="home-founders__grid alt-cards">
-              <article class="home-founder-card">
-                <div class="home-founder-card__hero">
-                  <span class="home-founder-card__num" aria-hidden="true">01</span>
-                  <div>
-                    <h3>Ben Christie</h3>
-                    <p class="home-founders__role">Founder & Buyer's Agent</p>
-                  </div>
-                  <span class="home-founder-card__initials" aria-hidden="true">BC</span>
+          <div class="home-founders__grid stagger">
+            <article class="home-founder">
+              <div class="home-founder__hero">
+                <span class="home-founder__initials" aria-hidden="true">BC</span>
+                <div>
+                  <h3>Ben Christie</h3>
+                  <p class="home-founder__role">Founder &amp; Buyer's Agent</p>
                 </div>
-                <div class="home-founder-card__body">
-                  <p class="home-founder-card__text">
-                    Military aviation, leadership and education taught Ben that important decisions
-                    depend on preparation, judgement and integrity—not certainty.
-                  </p>
-                  <a class="home-founder-card__link" href="/about.html#ben">
-                    Read Ben's story <span aria-hidden="true">→</span>
-                  </a>
+              </div>
+              <div class="home-founder__body">
+                <p class="home-founder__quote">"It deserves more than salesmanship. It deserves stewardship."</p>
+                <p class="home-founder__text">
+                  More than two decades as a military pilot and senior leader in the RAAF
+                  taught Ben that outcomes depend on preparation, disciplined judgement and
+                  integrity—not certainty. Those lessons now shape every client engagement.
+                </p>
+                <a class="home-founder__link" href="/about-ben.html">
+                  Read Ben's story <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+            <article class="home-founder">
+              <div class="home-founder__hero">
+                <span class="home-founder__initials" aria-hidden="true">LC</span>
+                <div>
+                  <h3>Liam Christie</h3>
+                  <p class="home-founder__role">Buyer's Agent</p>
                 </div>
-              </article>
-              <article class="home-founder-card">
-                <div class="home-founder-card__hero">
-                  <span class="home-founder-card__num" aria-hidden="true">02</span>
-                  <div>
-                    <h3>Liam Christie</h3>
-                    <p class="home-founders__role">Buyer's Agent</p>
-                  </div>
-                  <span class="home-founder-card__initials" aria-hidden="true">LC</span>
-                </div>
-                <div class="home-founder-card__body">
-                  <p class="home-founder-card__text">
-                    A new generation of buyers and investors—combining discipline, lived experience
-                    and a genuine desire to help others navigate today's market.
-                  </p>
-                  <a class="home-founder-card__link" href="/about.html#liam">
-                    Read Liam's story <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-            </div>
+              </div>
+              <div class="home-founder__body">
+                <p class="home-founder__quote">"Buying well is only the beginning."</p>
+                <p class="home-founder__text">
+                  A former Australian Youth Olympic representative, homeowner and investor,
+                  Liam brings discipline, resilience and lived experience—plus a genuine
+                  desire to help others navigate today's property market with confidence.
+                </p>
+                <a class="home-founder__link" href="/about-liam.html">
+                  Read Liam's story <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>

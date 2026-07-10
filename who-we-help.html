@@ -1,165 +1,168 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Who we help — busy professionals, Defence families, first-home buyers, investors and expatriates making property decisions in Australia."
+      content="Who we help — busy professionals, Defence families, medical professionals, first-home buyers, investors and expatriates making property decisions in Australia."
     />
     <title>Who We Help | Christie Prestige Property</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/who.css" />
+    <style>
+      /* Prevent FOUC: decorative emblems flash full-size before CSS modules load */
+      .page-hero__watermark,
+      .home-hero__watermark,
+      .home-standard__mark,
+      .site-closing__mark,
+      .about-story__watermark {
+        position: absolute;
+        width: min(34vw, 320px);
+        max-width: 320px;
+        height: auto;
+        opacity: 0.06;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+    <script type="module" src="/js/main.js"></script>
+
   </head>
   <body class="page-who" data-page="who">
+    <div class="preloader" data-preloader aria-hidden="true">
+      <div class="preloader__inner">
+        <img class="preloader__emblem" src="/assets/emblem.svg" alt="" />
+        <span class="preloader__word">Christie</span>
+        <span class="preloader__tag">Prestige Property</span>
+        <span class="preloader__bar"><span class="preloader__bar-fill"></span></span>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container site-header__inner" data-include="header"></div>
     </header>
 
-    <main>
-      <section class="page-hero page-hero--photo page-hero--who">
-        <img
-          class="page-hero__photo"
-          src="/assets/hero-suburban.jpg"
-          alt=""
-          width="1200"
-          height="800"
-          fetchpriority="high"
-          aria-hidden="true"
-        />
-        <div class="page-hero__overlay" aria-hidden="true"></div>
+    <main class="page-enter">
+      <section class="page-hero">
         <img class="page-hero__watermark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
         <div class="container page-hero__inner">
-          <p class="eyebrow">Our Clients</p>
-          <h1>Who we help</h1>
+          <p class="eyebrow">Our clients</p>
+          <h1>People making <em>important</em> property decisions</h1>
           <p class="lead">
-            We serve Australians navigating property decisions that carry real weight—for
-            themselves, their families and their futures. If your situation demands thoughtful
-            guidance rather than sales pressure, you may be in the right place.
+            We advocate in your interest—never the seller's. Thoughtful guidance, not sales pressure.
           </p>
         </div>
       </section>
 
-      <section class="who-audiences" aria-labelledby="who-audiences-heading">
+      <section class="who-grid-section">
         <div class="container">
-          <header class="who-audiences__head">
-            <p class="eyebrow">Who we serve</p>
-            <h2 id="who-audiences-heading">Clients with <em>real stakes</em></h2>
+          <header class="who-grid-section__head reveal">
+            <p class="page-label">Who we serve</p>
+            <h2>Clients with <em>real stakes</em></h2>
           </header>
-          <div class="who-audiences__panel">
-            <ul class="who-audiences__grid alt-cards">
-              <li class="alt-card--light">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">01</span>
-                  <h3>Busy professionals</h3>
-                </div>
-                <p>
-                  Your time is valuable and the market moves quickly. We bring structure,
-                  research and advocacy so you can make confident decisions without sacrificing
-                  your career or family life.
-                </p>
-              </li>
-              <li class="alt-card--dark">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">02</span>
-                  <h3>Defence families</h3>
-                </div>
-                <p>
-                  Postings, relocations and uncertain timelines demand a buyer's agent who
-                  understands service life. Ben's military background means we speak your
-                  language—and respect the pressures you face.
-                </p>
-              </li>
-              <li class="alt-card--light">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">03</span>
-                  <h3>Medical professionals</h3>
-                </div>
-                <p>
-                  Long hours, demanding schedules and significant financial decisions require
-                  a partner who works with precision, communicates clearly and respects the
-                  stakes involved.
-                </p>
-              </li>
-              <li class="alt-card--dark">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">04</span>
-                  <h3>First-home buyers</h3>
-                </div>
-                <p>
-                  The excitement of your first purchase comes with uncertainty. We help you
-                  understand the process, weigh your options and buy well—without the hype
-                  that so often surrounds first-home decisions.
-                </p>
-              </li>
-              <li class="alt-card--light">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">05</span>
-                  <h3>Growing investors</h3>
-                </div>
-                <p>
-                  Building a portfolio requires discipline, research and honest advice. We help
-                  experienced and emerging investors make decisions aligned with long-term
-                  strategy—not short-term noise.
-                </p>
-              </li>
-              <li class="alt-card--dark">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">06</span>
-                  <h3>Interstate buyers</h3>
-                </div>
-                <p>
-                  Buying in an unfamiliar market from a distance requires trusted local
-                  advocacy. We represent your interests on the ground—with the diligence
-                  you'd apply yourself if you could be there.
-                </p>
-              </li>
-              <li class="alt-card--dark who-audience--wide">
-                <div class="who-audience__head">
-                  <span class="who-audience__num">07</span>
-                  <h3>Australians working overseas</h3>
-                </div>
-                <p>
-                  Government, defence, corporate and other expatriates wishing to invest in
-                  Australia or secure a home before returning face unique challenges—time zones,
-                  distance, and the need for someone they can trust completely. We provide that
-                  stewardship, keeping you informed and represented throughout.
-                </p>
-              </li>
-            </ul>
-          </div>
+          <ul class="who-grid stagger">
+            <li class="who-card">
+              <span class="who-card__num">01</span>
+              <h3>Busy professionals</h3>
+              <p>
+                Time-poor and outcome-focused. We carry the search, analysis and negotiation
+                so you can decide with confidence without sacrificing career or family life.
+              </p>
+            </li>
+            <li class="who-card">
+              <span class="who-card__num">02</span>
+              <h3>Defence families</h3>
+              <p>
+                Postings, relocations and uncertain timelines demand an advocate who understands
+                service life. Ben's military background means we speak your language.
+              </p>
+            </li>
+            <li class="who-card">
+              <span class="who-card__num">03</span>
+              <h3>Medical &amp; healthcare</h3>
+              <p>
+                Demanding rosters and significant financial decisions deserve a partner who
+                works with precision, communicates clearly and respects the stakes involved.
+              </p>
+            </li>
+            <li class="who-card">
+              <span class="who-card__num">04</span>
+              <h3>First-home buyers</h3>
+              <p>
+                Clarity and mentorship from the first step to the front door—without the hype
+                that so often surrounds first-home decisions.
+              </p>
+            </li>
+            <li class="who-card">
+              <span class="who-card__num">05</span>
+              <h3>Growing investors</h3>
+              <p>
+                Disciplined due diligence for residential, commercial and SMSF acquisitions—
+                aligned with long-term strategy, not short-term noise.
+              </p>
+            </li>
+            <li class="who-card">
+              <span class="who-card__num">06</span>
+              <h3>Interstate buyers</h3>
+              <p>
+                Buying in an unfamiliar market from a distance requires trusted local advocacy.
+                We represent your interests on the ground with diligence.
+              </p>
+            </li>
+            <li class="who-card who-card--wide">
+              <span class="who-card__num">07</span>
+              <h3>Australians working overseas</h3>
+              <p>
+                Government, defence, corporate and other expatriates investing in Australia or
+                securing a home before returning face unique challenges—time zones, distance and
+                the need for someone they can trust completely. We provide that stewardship.
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="who-objective section">
-        <div class="container">
-          <div class="who-objective__panel">
-            <div class="who-objective__copy">
-              <p class="eyebrow">A Shared Objective</p>
-              <h2>Improving the quality of important decisions</h2>
-              <p>
-                Whether assisting a first-home buyer, a medical professional, a Defence family,
-                an expatriate returning home or an experienced investor, our objective remains
-                constant: to improve the quality of important property decisions while building
-                trusted relationships that endure well beyond settlement.
-              </p>
-            </div>
-            <aside class="who-objective__card">
-              <h3>Is this you?</h3>
-              <p>
-                You value thoughtful guidance over hard selling. You want someone who will tell
-                you what they see—not what you want to hear. And you're looking for a partner
-                who will still be beside you after settlement.
-              </p>
-              <a class="text-link" href="/contact.html">Tell us about your situation →</a>
-            </aside>
+      <section class="who-caps" aria-label="Service areas">
+        <div class="container who-caps__inner">
+          <p class="who-caps__label">Advocacy across</p>
+          <ul class="who-caps__list">
+            <li>Residential</li>
+            <li>Commercial</li>
+            <li>SMSF</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="who-fit">
+        <div class="container who-fit__inner">
+          <div class="who-fit__copy reveal">
+            <p class="page-label">A shared objective</p>
+            <h2>Improving the quality of <em>important decisions</em></h2>
+            <p>
+              Whether assisting a first-home buyer, a medical professional, a Defence family,
+              an expatriate returning home or an experienced investor, our objective remains
+              constant: better decisions, and relationships that endure beyond settlement.
+            </p>
           </div>
+          <aside class="who-fit__card reveal">
+            <h3>Is this you?</h3>
+            <p>
+              You value thoughtful guidance over hard selling. You want someone who will tell
+              you what they see—not what you want to hear.
+            </p>
+            <a class="page-textlink" href="/our-process.html">
+              See our process <span aria-hidden="true">→</span>
+            </a>
+          </aside>
         </div>
       </section>
 
@@ -169,7 +172,5 @@
     <footer class="site-footer">
       <div class="container" data-include="footer"></div>
     </footer>
-
-    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

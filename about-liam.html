@@ -1,75 +1,111 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Liam Christie — Buyer's Agent at Christie Prestige Property. A new generation perspective on property with discipline, resilience and lived experience."
+      content="Liam Christie — Buyer's Agent at Christie Prestige Property. Youth Olympian, homeowner and investor helping Australians buy with confidence."
     />
     <title>Liam Christie | Christie Prestige Property</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <style>
+      /* Prevent FOUC: decorative emblems flash full-size before CSS modules load */
+      .page-hero__watermark,
+      .home-hero__watermark,
+      .home-standard__mark,
+      .site-closing__mark,
+      .about-story__watermark {
+        position: absolute;
+        width: min(34vw, 320px);
+        max-width: 320px;
+        height: auto;
+        opacity: 0.06;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+    <script type="module" src="/js/main.js"></script>
+
   </head>
-  <body data-page="about">
+  <body class="page-about" data-page="about">
+    <div class="preloader" data-preloader aria-hidden="true">
+      <div class="preloader__inner">
+        <img class="preloader__emblem" src="/assets/emblem.svg" alt="" />
+        <span class="preloader__word">Christie</span>
+        <span class="preloader__tag">Prestige Property</span>
+        <span class="preloader__bar"><span class="preloader__bar-fill"></span></span>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container site-header__inner" data-include="header"></div>
     </header>
 
-    <main>
-      <section class="page-hero page-hero--photo page-hero--liam">
-        <img
-          class="page-hero__photo"
-          src="/assets/hero-apartment.jpg"
-          alt=""
-          width="1200"
-          height="800"
-          fetchpriority="high"
-          aria-hidden="true"
-        />
-        <div class="page-hero__overlay" aria-hidden="true"></div>
+    <main class="page-enter">
+      <section class="page-hero">
         <img class="page-hero__watermark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
         <div class="container page-hero__inner">
           <p class="eyebrow">Buyer's Agent</p>
           <h1>Liam Christie</h1>
           <p class="lead">
-            Property has always represented far more than bricks and mortar. To Liam, it
-            represents freedom, security and opportunity.
+            Property as freedom, security and opportunity—not just bricks and mortar.
           </p>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container about-layout">
-          <div>
-            <div class="prose">
-            <p>
-              Growing up, he watched home ownership become increasingly difficult for many in
+      <section class="profile-story">
+        <div class="container profile-story__layout">
+          <aside class="profile-story__aside reveal">
+            <div class="profile-story__card">
+              <span class="profile-story__initials" aria-hidden="true">LC</span>
+              <p class="profile-story__role">Buyer's Agent</p>
+              <h2>Liam Christie</h2>
+              <ul class="profile-story__meta">
+                <li>2016 Youth Olympian</li>
+                <li>Homeowner &amp; investor</li>
+                <li>Next-generation advocacy</li>
+              </ul>
+              <a class="page-textlink" href="/about-ben.html">
+                Meet Ben <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </aside>
+
+          <article class="profile-story__body reveal">
+            <p class="profile-story__lead">
+              Growing up, Liam watched home ownership become increasingly difficult for many in
               his generation and became fascinated by what creates long-term value and helps
               ordinary Australians build wealth through property.
             </p>
             <p>
-              Long before property, Liam learned the value of discipline as a competitive
-              gymnast and trampoline athlete, representing Australia at the 2016 Youth Olympic
-              Games. Years of training taught him resilience, preparation and the importance of
-              staying focused on long-term goals—qualities that now shape the way he approaches
-              every client engagement.
+              Long before property, Liam learned the value of discipline as a competitive gymnast
+              and trampoline athlete, representing Australia at the 2016 Youth Olympic Games.
+              Years of training taught him resilience, preparation and the importance of staying
+              focused on long-term goals—qualities that now shape the way he approaches every
+              client engagement.
             </p>
             <p>
               Liam purchased his own home before expanding into property investment, giving him
               firsthand experience of the excitement, uncertainty and responsibility that comes
               with ownership. When an investment property suffered significant tenant damage, he
               experienced at real cost the importance of careful due diligence and surrounding
-              yourself with trusted professionals. It reinforced a lesson that now guides his
-              work: buying well is only the beginning; success depends upon having the right
-              people beside you long after settlement.
+              yourself with trusted professionals.
             </p>
+            <blockquote class="profile-story__pull">
+              <span class="profile-story__pull-mark" aria-hidden="true">“</span>
+              Buying well is only the beginning; success depends upon having the right people
+              beside you long after settlement.
+            </blockquote>
             <p>
               Before entering the property profession, Liam worked as an airport baggage handler
               before progressing into a training manager role. Those years taught humility, work
@@ -84,37 +120,28 @@
               Christie Standard—and a shared commitment to helping clients make thoughtful
               property decisions with confidence, clarity and integrity.
             </p>
-            <p>
-              Liam's mission is simple: to help Australians buy the right property with confidence,
-              supported by honest advice, disciplined research and genuine advocacy every step of
-              the way.
+            <p class="profile-story__close">
+              Liam's mission is simple: to help Australians buy the right property with
+              confidence, supported by honest advice, disciplined research and genuine advocacy
+              every step of the way.
             </p>
+            <div class="profile-story__links">
+              <a class="page-textlink" href="/christie-standard.html">
+                The Christie Standard <span aria-hidden="true">→</span>
+              </a>
+              <a class="page-textlink" href="/about.html">
+                Back to About <span aria-hidden="true">→</span>
+              </a>
             </div>
-            <div class="about-actions">
-              <a class="btn btn--secondary" href="/about.html">← Full about page</a>
-              <a class="btn btn--primary" href="/contact.html">Start the Conversation</a>
-            </div>
-          </div>
-
-          <aside class="profile-card">
-            <div class="profile-card__avatar" aria-hidden="true">BC</div>
-            <p class="profile-card__role">Founder & Buyer's Agent</p>
-            <h3>Ben Christie</h3>
-            <p>
-              Former RAAF pilot and senior leader. Decades of decision-making under pressure—now
-              applied to property with preparation, judgement and integrity.
-            </p>
-            <a class="profile-card__link" href="/about.html#ben">Meet Ben Christie →</a>
-          </aside>
+          </article>
         </div>
       </section>
+
       <div data-include="closing"></div>
     </main>
 
     <footer class="site-footer">
       <div class="container" data-include="footer"></div>
     </footer>
-
-    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

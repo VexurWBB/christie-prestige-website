@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
@@ -9,46 +9,63 @@
     />
     <title>Contact | Christie Prestige Property</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <style>
+      /* Prevent FOUC: decorative emblems flash full-size before CSS modules load */
+      .page-hero__watermark,
+      .home-hero__watermark,
+      .home-standard__mark,
+      .site-closing__mark,
+      .about-story__watermark {
+        position: absolute;
+        width: min(34vw, 320px);
+        max-width: 320px;
+        height: auto;
+        opacity: 0.06;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+    <script type="module" src="/js/main.js"></script>
+
   </head>
-  <body data-page="contact">
+  <body class="page-contact" data-page="contact">
+    <div class="preloader" data-preloader aria-hidden="true">
+      <div class="preloader__inner">
+        <img class="preloader__emblem" src="/assets/emblem.svg" alt="" />
+        <span class="preloader__word">Christie</span>
+        <span class="preloader__tag">Prestige Property</span>
+        <span class="preloader__bar"><span class="preloader__bar-fill"></span></span>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container site-header__inner" data-include="header"></div>
     </header>
 
-    <main>
-      <section class="page-hero page-hero--photo page-hero--contact">
-        <img
-          class="page-hero__photo"
-          src="/assets/hero-bedroom.jpg"
-          alt=""
-          width="1200"
-          height="800"
-          fetchpriority="high"
-          aria-hidden="true"
-        />
-        <div class="page-hero__overlay" aria-hidden="true"></div>
+    <main class="page-enter">
+      <section class="page-hero">
         <img class="page-hero__watermark" src="/assets/emblem.svg" alt="" aria-hidden="true" />
         <div class="container page-hero__inner">
           <p class="eyebrow">Get in touch</p>
-          <h1>Start the conversation</h1>
+          <h1>Start the <em>conversation</em></h1>
           <p class="lead">
-            Every engagement begins with listening. Tell us about your situation and we'll respond
-            thoughtfully—no pressure, no sales pitch, just clarity about whether we're the right
-            fit.
+            Every engagement begins with listening—no pressure, no sales pitch, just clarity.
           </p>
         </div>
       </section>
 
-      <section class="section section--white">
+      <section class="contact-section">
         <div class="container contact-layout">
-          <aside class="contact-info">
+          <aside class="contact-info reveal">
             <p class="contact-info__label">What happens next</p>
             <h3>Thoughtful follow-up, not a sales chase</h3>
             <p>
@@ -56,18 +73,18 @@
               initial conversation—usually within one business day.
             </p>
             <p>
-              That first conversation is an opportunity for us both to understand whether there's a
-              genuine fit. We will never pressure you toward a decision you're not ready to make.
+              That first conversation is an opportunity for us both to understand whether there's
+              a genuine fit. We will never pressure you toward a decision you're not ready to make.
             </p>
             <ul class="contact-trust">
-              <li>Buyer's advocacy across Australia</li>
+              <li>Gold Coast based · Australia-wide</li>
               <li>No hype, urgency or exaggerated claims</li>
               <li>We illuminate. We do not persuade.</li>
             </ul>
             <p class="contact-info__quote">Speak to illuminate. Teach before selling.</p>
           </aside>
 
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form reveal">
             <p class="contact-form__label">Your enquiry</p>
             <h3 class="contact-form__title">Tell us about your situation</h3>
             <div class="form-group">
@@ -115,7 +132,5 @@
     <footer class="site-footer">
       <div class="container" data-include="footer"></div>
     </footer>
-
-    <script type="module" src="/js/main.js"></script>
   </body>
 </html>
