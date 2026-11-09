@@ -10,4 +10,7 @@ temp_interactive_push.bat
 config.bat
 
 # Never commit secrets or editor auto-run tasks
+.env
+.env.local
 .env.*.local
+.vscode/
